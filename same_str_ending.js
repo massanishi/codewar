@@ -15,4 +15,10 @@ function solution(str, ending){
   return true;
 }
 
-console.log(solution('o', ''));
+
+
+function bestSolution(str, ending){
+  return new RegExp(ending+"$", "i").test(str);
+}
+
+console.log(bestSolution('test', 'st'));
