@@ -13,3 +13,21 @@ function DNAStrand(dna){
 }
 
 console.log(DNAStrand('GTA'));
+
+// Best solution
+function DNAStrandBest(dna) {
+  return dna.replace(/./g, function(c) {
+    console.log(c);
+    return DNAStrandBest.pairs[c]
+  })
+}
+
+// Use of table is nice in this case, when replacement is simple and easy to set up. Much easier to read than mine.
+
+DNAStrandBest.pairs = {
+  A: 'T',
+  T: 'A',
+  C: 'G',
+  G: 'C',
+}
+console.log(DNAStrandBest('AGTA'));
