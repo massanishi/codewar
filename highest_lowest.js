@@ -30,6 +30,11 @@ function bubbleSort(numbers){
 console.log(highAndLow('0 4 2 3 -1'));
 //console.log(bubbleSort('0 4 2 3 -1'));
 
+// Best
+function highAndLow(numbers){
+  numbers = numbers.split(' ').map(Number);
+  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
 
 
 
