@@ -4,3 +4,8 @@ function vectorLength(vector){
 }
 
 console.log(vectorLength([[0, 3],[4, 0]]));
+
+var ary = [1,2,3,4,5];
+ary.map(function(m){
+	console.log(m);
+})
