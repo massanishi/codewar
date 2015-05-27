@@ -4,9 +4,7 @@
 
 // The program reports the nth day (as an integer) on which the evaporator will be out of use.
 
-// Note : Content is in fact not necessary in the body of the function "evaporator", you can use it or not use it, as you wish. Some people might prefer to reason with content, some other with percentages only. It's up to you but you must keep it as a parameter because the tests have it as an argument.
-
-function evaporator(content, evap_per_day, threshold){ 
+function evaporator(evap_per_day, threshold){ 
   var day = 0;
   var effectiveDeodrantLeft = 100;
   evap_per_day /= 100;
@@ -22,7 +20,7 @@ function evaporator(content, evap_per_day, threshold){
 console.log(evaporator(10,10,10));
 
 // Best. Using log which I don't understand the arithmatic
-function evaporator(content, evap_per_day, threshold){ 
+function evaporator(evap_per_day, threshold){ 
   threshold = threshold / 100
   evap_per_day = evap_per_day / 100
   return  Math.ceil(Math.log(threshold) / Math.log(1-evap_per_day))
